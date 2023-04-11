@@ -88,6 +88,43 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "BLL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "DAL": "1.0.0",
+          "ENTITY": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/BLL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BLL.dll": {}
+        }
+      },
+      "DAL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "ENTITY": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/DAL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DAL.dll": {}
+        }
+      },
+      "ENTITY/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/ENTITY.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ENTITY.dll": {}
+        }
       }
     }
   },
@@ -216,10 +253,27 @@
         "swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512",
         "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
+    },
+    "BLL/1.0.0": {
+      "type": "project",
+      "path": "../BLL/BLL.csproj",
+      "msbuildProject": "../BLL/BLL.csproj"
+    },
+    "DAL/1.0.0": {
+      "type": "project",
+      "path": "../DAL/DAL.csproj",
+      "msbuildProject": "../DAL/DAL.csproj"
+    },
+    "ENTITY/1.0.0": {
+      "type": "project",
+      "path": "../ENTITY/ENTITY.csproj",
+      "msbuildProject": "../ENTITY/ENTITY.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "BLL >= 1.0.0",
+      "ENTITY >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.2.3"
     ]
   },
@@ -255,7 +309,14 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\RepositoriosIC\\Prueba\\BLL\\BLL.csproj": {
+              "projectPath": "D:\\RepositoriosIC\\Prueba\\BLL\\BLL.csproj"
+            },
+            "D:\\RepositoriosIC\\Prueba\\ENTITY\\ENTITY.csproj": {
+              "projectPath": "D:\\RepositoriosIC\\Prueba\\ENTITY\\ENTITY.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
